@@ -70,6 +70,7 @@ const compareGuess=()=>{
             document.getElementById('guess-img').style.display='none'
             document.getElementById('input-field').setAttribute('disabled','true')
             document.getElementById('input-field').value = '';
+            document.getElementById('restart').style.display='none'
             
         }
         document.getElementById('attempts').innerHTML=userGuess.length;
@@ -84,6 +85,8 @@ const compareGuess=()=>{
                 newGameBtn.style.display='block'
                 document.getElementById('input-field').setAttribute('disabled','true')
                 document.getElementById('input-field').value = '';
+                document.getElementById('restart').style.display='none'
+
 
 
         }
@@ -93,6 +96,9 @@ const compareGuess=()=>{
             document.getElementById('guess-img').style.display='none'
             document.getElementById('input-field').setAttribute('disabled','true')
             document.getElementById('input-field').value = '';
+            document.getElementById('restart').style.display='none'
+            
+
             
         }
         document.getElementById('attempts').innerHTML=userGuess.length;
