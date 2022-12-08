@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number: Game</title>
+    <link rel="shortcut icon" href="./images/png-clipart-iphone-emoji-samsung-galaxy-guess-the-questions-crying-emoji-emoticon-logo-electronics-smiley-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body onload="init()">
+    <!-- container Start -->
+    <div class="main-container">
+      <button id=restart onclick="reload()">Restart</button>
+      <div class="container-outside">
+        <div class="container">
+          <div class="front" id="front-area">
+            <div class="heading">
+              <h1>Guess the number</h1>
+              <img
+                src="./images/toppng.com-question-marks-png-396x597.png"
+                alt=""
+              />
+            </div>
+            <img
+              class="guess-img"
+              src="./images/png-clipart-iphone-emoji-samsung-galaxy-guess-the-questions-crying-emoji-emoticon-logo-electronics-smiley-removebg-preview.png"
+              alt=""
+            />
+            <div class="wish">
+              <p>All the best😊</p>
+            </div>
+            <div class="easy-attempt">
+              <button id="easy-btn" onclick="easyMode()">Easy Attempt: 10</button>
+            </div>
+            <div class="hard-attempt">
+              <button id="hard-btn" onclick="hardMode()">Hard Attempt: 5</button>
+            </div>
+          </div>
+  
+          <!-- Game area -->
+          <div class="game-area" id="game-area">
+            <div class="new-game-btn">
+              <button id="new-game-btn" onclick="reload()">New Game</button>
+              <img
+              class="guess-img" 
+              id="guess-img"
+              src="./images/png-clipart-iphone-emoji-samsung-galaxy-guess-the-questions-crying-emoji-emoticon-logo-electronics-smiley-removebg-preview.png"
+              alt=""
+            />
+            </div>
+            <div class="result">
+              <p id="show-result">Your Guess</p>
+            </div>
+            <div class="input-field">
+              <input type="number" min="1" max="100" id="input-field" \ placeholder="Enter Your Guess" onchange="compareGuess()"/>
+            </div>
+            
+            <div class="attempts" >Number Of Previous Attempts: <span id="attempts">0</span></div>
+            <div class="guesses" >Number Of Previous Guesses: <span id="guesses">0</span></div>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Container End -->
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
